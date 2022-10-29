@@ -1,0 +1,52 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int r,c,i,j;
+    cout<<"Enter the number of rows= ";
+    cin>>r;
+    cout<<"Enter the number of columns= ";
+    cin>>c;
+
+    //Input 1st 2d array
+    int a[r][c];
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            cout<<"Enter the elements of first array= ";
+            cin>>a[i][j];
+        }
+    }
+
+    //Input 2nd array
+    int b[r][c];
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            cout<<"Enter the elements of 2nd array= ";
+            cin>>b[i][j];
+        }
+    }
+
+    //Adding the arrays and storing the values in a 3rd array
+    int sum[r][c];
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            sum[i][j] = a[i][j] + b[i][j];
+        }
+    }
+
+    //Displaying the results
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            cout<<" "<<sum[i][j];
+        }
+        cout<<"\n";
+    }    
+}
