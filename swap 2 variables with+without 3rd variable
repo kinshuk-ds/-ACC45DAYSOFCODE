@@ -1,0 +1,45 @@
+//With 3rd variable
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int a,b,temp;
+    cout<<"Enter First no. = ";
+    cin>>a;
+    cout<<"Enter 2nd no. = ";
+    cin>>b;
+    cout<<endl<<"Before Swapping";
+    cout<<endl<<"1st no: "<<a;
+    cout<<endl<<"2nd no: "<<b;
+    
+    temp=a;
+    a=b;
+    b=temp;
+
+    cout<<endl<<"After Swapping";
+    cout<<endl<<"1st no: "<<a;
+    cout<<endl<<"2nd no: "<<b;
+}
+
+//Without 3rd variable
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int a,b,temp;
+    cout<<"Enter First no. = ";
+    cin>>a;
+    cout<<"Enter 2nd no. = ";
+    cin>>b;
+    cout<<endl<<"Before Swapping";
+    cout<<endl<<"1st no: "<<a;
+    cout<<endl<<"2nd no: "<<b;
+    
+    a=a+b;
+    b=a-b;
+    a=a-b;
+
+    cout<<endl<<"After Swapping";
+    cout<<endl<<"1st no: "<<a;
+    cout<<endl<<"2nd no: "<<b;
+}
