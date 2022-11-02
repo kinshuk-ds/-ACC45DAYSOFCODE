@@ -1,0 +1,63 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+int weight[]={2,4,1,2,3};
+int profit[]={6,8,3,9,12};
+int n = 5;
+int max= 0;
+float ratio[n];
+int cap = 7;
+for(int i=0;i<n;i++)
+{
+ratio[i]=(float)profit[i]/weight[i];
+}
+for(int i=0;i<n;i++)
+{
+cout<<ratio[i]<<" "<<weight[i]<<" "<<profit[i]<<endl;
+}
+
+//BUBBLE SORT
+for(int i=0;i<(n-1);i++)
+{
+for(int j=0;j<(n-i-1);i++)
+{
+if(ratio[j]<ratio[j+1])
+{
+float temp =ratio[j];
+ratio[j] = ratio[j+1];
+ratio[j+1] = temp;
+
+int tem =weight[j];
+weight[j] = weight[j+1];
+weight[j+1] = temp;
+
+int t =profit[j];
+profit[j] = profit[j+1];
+profit[j+1] = temp;
+}
+}
+}
+
+cout<<"_____________________________________________"<<endl;
+
+for(int i=0;i<n;i++)
+{
+cout<<ratio[i]<<" "<<weight[i]<<" "<<profit[i]<<endl;
+}
+
+//FINDING AND PRINTNG MAXIMUM PROFIT
+int i=0;
+while(weight[i]<=cap)
+{
+max = max + profit[i];
+cap = cap - weight[i];
+i++;
+}
+if(weight[i]>cap)
+{
+max = max + (int)ratio[i]*cap;
+}
+cout<<"Maximum Profit = "<<max;
+}
